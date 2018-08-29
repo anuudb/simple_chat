@@ -38,7 +38,8 @@ io.on('connection', (socket) => {
     //listen on new_message
     socket.on('new_message', (data) => {
         //broadcast the new message
-        io.sockets.emit('new_message', {message : data.message, username : socket.username});
+        // io.sockets.emit('new_message', {message : data.message, username : socket.username});
+        console.log('Red ALERT', {Agent : socket.username, Alert : data.message});
     })
 
     //listen on typing
